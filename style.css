@@ -71,7 +71,6 @@
 }
 
 .landing-banner h1 {
-    font-family: "Noto Serif", sans-serif;
     padding: 0 2rem;
     text-align: center;
     font-size: 3rem;
@@ -201,7 +200,7 @@ button:hover {
     width: 100%;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(185,185,185,1) 78%, rgba(135,135,135,1) 100%);
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
 }
 
 .services-header {
@@ -283,12 +282,15 @@ button:hover {
 }
 
 .service-header h3 {
+    font-family: 'Cabin', sans-serif;
+    color: var(--black);
     font-size: 1.3rem;
     line-height: 1.6rem;
     font-weight: 400;
 }
 
 .service-text {
+    font-family: 'Cabin', sans-serif;
     font-size: 0.8rem;
     text-align: justify;
 }
