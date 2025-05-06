@@ -5,10 +5,18 @@ menu.addEventListener('click', () => {
     document.querySelector(".landing-banner").classList.toggle("blur");
 });
 
-let accordion = document.querySelector('.accordionBox'),
-    accordionItem = document.querySelectorAll('.accordionItem');
-accordionItem.forEach(elem => {
-    elem.addEventListener('click', function (e) {
-        e.srcElement.parentElement.classList.toggle('active');
+let accordionItems = document.querySelectorAll('.accordionItem');
+
+accordionItems.forEach(item => {
+    item.addEventListener('click', function () {
+        let isActive = this.classList.contains('active');
+
+        // Remove 'active' from all items
+        accordionItems.forEach(i => i.classList.remove('active'));
+
+        // Toggle only if it wasn't already active
+        if (!isActive) {
+            this.classList.add('active');
+        }
     });
 });
