@@ -412,7 +412,22 @@ button:hover {
 /* Contact Us Section */
 .contact-us {
     background-color: var(--black);
-    height: 100vh; 
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+}
+
+.contact-wrapper {
+    text-align: center;
+    padding: 0 6rem;
+}
+
+.contact-us-heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    color: var(--white);
+    text-shadow: 0.15rem 0.15rem rgba(0,0,0,0.6);
 }
 
 /* Responsive Design */
