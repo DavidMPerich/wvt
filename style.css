@@ -9,7 +9,8 @@
 /* Global Color Variables */
 :root {
     --green: #6B705C;
-    --light-green: #9ca385;
+    --light-green: #c4cca8;
+    /* --light-green: #9ca385; */
     --blue: #5C6B70;
     --purple: #705C6B;
     --light-purple: #5a4a57;
@@ -310,7 +311,10 @@ button:hover {
 
 /* FAQ Section */
 .faq {
-    background-color: var(--black);
+    background-image: url(images/faq.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100%; 
     display: flex;
     flex-direction: column;
@@ -324,17 +328,21 @@ button:hover {
     color: var(--white);
     letter-spacing: 0.4rem;
     text-shadow: 0.1rem 0.1rem rgba(0,0,0,0.4);
-    margin-bottom: 2rem;
-    padding-top: 6rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    width: 32rem;
+    margin-top: 6rem;
+    padding: 1rem 0;
 }
 
 .accordionBox {
     width: 30rem;
-    margin: 1.8rem;
     max-width: 30rem;
     padding: 1rem;
-    border-radius: 0.4rem;
-    background-color: #fff;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    background-color: var(--white);
     
   }
   
@@ -455,7 +463,7 @@ button:hover {
     }
 
     .faq-header {
-        padding-top: 4rem;
+        width: 22rem;
     }
 
     .accordionBox {
