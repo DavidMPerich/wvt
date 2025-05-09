@@ -15,7 +15,8 @@
     --purple: #705C6B;
     --light-purple: #5a4a57;
     --white: #ebe6d9;
-    --black: #4e4949;
+    --black: #444141;
+    --light-black: #4e4949;
 
 }
 
@@ -219,7 +220,7 @@ button:hover {
 .services-heading {
     text-align: center;
     font-size: 3.2rem;
-    color: var(--black);
+    color: var(--light-black);
     letter-spacing: 0.4rem;
     text-shadow: 0.1rem 0.1rem rgba(0,0,0,0.4);
     margin-bottom: 2rem;
@@ -228,7 +229,7 @@ button:hover {
 .underline {
     width: 12rem;
     height: .3rem;
-    background-color: var(--black);
+    background-color: var(--light-black);
 }
 
 .avail-services {
@@ -283,13 +284,13 @@ button:hover {
 
 .service-header i {
     font-size: 2rem;
-    color: var(--black);
+    color: var(--light-black);
     margin-right: 1rem;
 }
 
 .service-header h3 {
     font-family: 'Cabin', sans-serif;
-    color: var(--black);
+    color: var(--light-black);
     font-size: 1.3rem;
     line-height: 1.6rem;
     font-weight: 400;
@@ -412,24 +413,116 @@ button:hover {
 
 /* Contact Us Section */
 .contact-us {
-    background-color: var(--black);
+    background-color: var(--light-black);
     height: 100%;
     padding-top: 4rem;
     padding-bottom: 12rem;
 }
 
 .contact-wrapper {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0 6rem;
 }
 
 .contact-us-heading {
     text-align: center;
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
     color: var(--white);
     text-shadow: 0.15rem 0.15rem rgba(0,0,0,0.6);
 }
+
+.contact-underline {
+    width: 12rem;
+    height: .3rem;
+    background-color: var(--white);
+    margin-bottom: 6rem;
+    box-shadow: .1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
+}
+
+.contact-showcase {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    gap: 10rem;
+}
+
+.hours-of-operation {
+    padding: 2.5rem;
+    background-color: var(--black);
+    border-radius: 12px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+.hours-of-operation h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--white)
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-weight: bold;
+    color: var(--white);
+    padding-right: 2rem;
+}
+
+.time {
+    color: var(--white);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-landing {
+    color: var(--white);
+    width: 20rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+
+}
+
+.contact-landing h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    font-size: 2.5rem;
+    color: #d9534f;
+    padding-bottom: 0.5rem;
+}
+
 
 /* Responsive Design */
 @media(min-width:1000px) {
@@ -451,6 +544,30 @@ button:hover {
 
     .services-img-wrapper {
         display: none;
+    }
+}
+
+@media(max-width:1100px) {
+    .contact-showcase {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .hours-of-operation {
+        font-size: 0.8rem;
+        margin: 0 0.2rem;
+    }
+
+    .contact-us-heading {
+        font-size: 2.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+    .day {
+        padding-right: 0.5rem;
     }
 }
 
@@ -489,6 +606,7 @@ button:hover {
     .accordionItem .body {
         font-size: 0.9rem;
     }
+
 }
 
 @media(max-width:600px) {    
