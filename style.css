@@ -10,7 +10,6 @@
 :root {
     --green: #6B705C;
     --light-green: #c4cca8;
-    /* --light-green: #9ca385; */
     --blue: #5C6B70;
     --purple: #705C6B;
     --light-purple: #5a4a57;
@@ -349,40 +348,39 @@ button:hover {
     padding: 1rem;
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
-    background-color: var(--white);
-    
-  }
+    background-color: var(--white); 
+}
   
-  .accordionItem {
+.accordionItem {
     transition: all 0.2s;
     border-radius: 0.8rem;
-  }
+}
 
-  .accordionItem .header {
+.accordionItem .header {
     display: flex;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 0.5rem;
     align-items: center;
     border-radius: 0.4rem;
     justify-content: space-between;
-  }
-  
-  .accordionItem .header h3,
-  .accordionItem .header i {
+}
+
+.accordionItem .header:hover {
+    background-color: var(--light-green);
+}
+
+.accordionItem .header h3,
+.accordionItem .header i {
     pointer-events: none;
     font-size: 1.2rem;
-  }
-  
-  .accordionItem .header:hover {
-    background-color: var(--light-green);
-  }
-  
-  .accordionItem .header i {
+}
+
+.accordionItem .header i {
     font-size: 1rem;
     margin-right: 0.5rem;
-  }
-  
-  .accordionItem .body {
+}
+
+.accordionItem .body {
     max-height: 0;
     overflow: hidden;
     margin-top: 0.5rem;
@@ -390,27 +388,27 @@ button:hover {
     margin-left: 1.5rem;
     font-size: 1rem;
     padding-right: 1rem;
-  }
-  
-  .accordionItem.active {
+}
+
+.accordionItem.active {
     margin: 1rem 0;
     background-color: var(--light-green);
-  }
-  
-  .accordionItem.active .body {
+}
+
+.accordionItem.active .header {
+    background-color: var(--green);
+}
+
+.accordionItem.active .header i {
+    transition: all 0.2s;
+    transform: rotate(90deg);
+}
+
+.accordionItem.active .body {
     margin-top: 0.5rem;
     max-height: 5rem;
     padding-bottom: 0.6rem;
-  }
-  
-  .accordionItem.active .header {
-    background-color: var(--green);
-  }
-  
-  .accordionItem.active .header i {
-    transition: all 0.2s;
-    transform: rotate(90deg);
-  }
+}
 
 /* Contact Us Section */
 .contact-us {
@@ -513,11 +511,6 @@ button:hover {
 
 }
 
-.contact-landing h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
 .contact-info i {
     font-size: 2.5rem;
     color: var(--red);
@@ -531,42 +524,30 @@ button:hover {
     color: #f4efe9;
     font-family: 'Georgia', serif;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     justify-content: end;
-  }
-  
-  .footer-section {
+}
+
+.footer-section {
     min-width: 200px;
-  }
-  
-  .footer-section h3, .footer-section h4 {
+}
+
+.footer-section h4 {
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li a {
-    color: #f4efe9;
-    text-decoration: none;
-  }
-  
-  .footer-section ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .socials a {
+}
+
+.socials a {
+    pointer-events: none;   /* Remove when socials are up */
+    cursor: default;        /* Remove when socials are up */
     margin-right: 10px;
     color: var(--purple);
     font-size: 1.3em;
     text-decoration: none;
-  }
+}
   
 /* Responsive Design */
 @media(min-width:1000px) {
@@ -592,6 +573,10 @@ button:hover {
 }
 
 @media(max-width:1100px) {
+    .contact-us-heading {
+        font-size: 2.5rem;
+    }
+
     .contact-showcase {
         flex-direction: column;
         align-items: center;
@@ -603,19 +588,16 @@ button:hover {
         margin: 0 0.2rem;
     }
 
-    .contact-us-heading {
-        font-size: 2.5rem;
+    .day {
+        padding-right: 0.5rem;
     }
 
     .contact-info {
         text-align: center;
     }
-    .day {
-        padding-right: 0.5rem;
-    }
+    
     .footer-content {
         flex-direction: column;
-        /* text-align: center; */
         align-items: center;
     }
 }
@@ -655,7 +637,6 @@ button:hover {
     .accordionItem .body {
         font-size: 0.9rem;
     }
-
 }
 
 @media(max-width:600px) {    
@@ -739,5 +720,9 @@ button:hover {
 
     .showcase {
         padding: 0 2rem;
+    }
+
+    .contact-us-heading {
+        font-size: 2rem;
     }
 }
